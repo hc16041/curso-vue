@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola mundo vue</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- uso del v-bind -->
+        <!-- <h1>{{user.title}} </h1>
+        <h2>{{name}}</h2>
+        <h3>{{user.age <18 ? 'no puedes pasar':'puedes pasar'}}</h3>
+        <hr>
+        <a v-bind:href='user.url' target="_blank">google</a>
+        <hr>
+        <img :src='user.picture' width="250" height="250"> -->
+
+        <!-- uso del v-if, una condicional simple
+        <h1 v-if="user.age>=18" class="good">Eres mayor de edad</h1>
+        <h1 v-else class="error">Eres menor de edad</h1> -->
+
+        <!-- <h1 :class="user.classValue">
+            {{user.age>=18 ? user.classValue='good' : user.classvalue='error'}}
+            {{user.title}}
+        </h1> -->
+
+        <!-- if multiple
+        <h1 v-if="user.age<=0 || user.age>110" class="rango_err">
+            Tu edad esta fuera de rango
+        </h1>
+        <h1 v-else-if="user.age >=18" class="good">Eres mayor de edad</h1>
+        <h1 v-else class="error">Eres menor de edad</h1> -->
+
+        <!-- uso de v-for -->
+        <ul>
+            <!-- el key nos servira mas adelante en cualquier uso con vue, es muy importante generarle un key -->
+            <li v-for="(movie,index) in user.movies" :key="index">{{movie}}</li>
+        </ul>
+    </div>
+
+
+
+
+    <script src="./index.js"></script>
+    <script>
+        const mountApp = app.mount(' #app')
+    </script>
+</body>
+
+</html>
